@@ -1,5 +1,21 @@
-
 img{
     aspect-ratio: 16/9;
-    border-bottom: 5px solid bisque;
+}
+.c-card{
+    /* border-radius: 15px;
+    border-bottom-right-radius: 0px; */
+    background: rgb(217,199,161);
+    background: linear-gradient(90deg, rgba(217,199,161,1) 0%, rgba(66,84,83,1) 88%);
+    border: 0;
+}
+h5{
+    /* border-top-right-radius: 15px; */
+}
+.btn-con{
+    width: 100%;
+    height: 100px;
+    background-color: blueviolet;
+}
+p{
+    color: #fff;
 }

@@ -18,14 +18,16 @@ async function country(data) {
         mainPage.appendChild(main);
 
         main.innerHTML = `
-            <div class="card m-3 c-card" id="card" style="width: 18rem;">
+            <div class="card m-3 c-card p-3" id="card" style="width: 18rem;">
                 <h5 class="m-0 text-center bg-dark text-light p-3">${countryName}</h5>
-                <img src="${flag}" class="card-img-top" alt="${countryName} flag">
+                <img src="${flag}" class="card-img-top mt-3" alt="${countryName} flag">
                 <div class="card-body">
                     <p class="card-text text-center">Capital: ${capital}</p>
                     <p class="card-text text-center">Region: ${region}</p>
                     <p class="card-text text-center">Country Code: ${code}</p>
-                    <button onclick='getWeather("${capital}")' class="btn btn-primary container">Click Weather</button>
+                    <div class"btn-con" style="display: flex;justify-content: center;"> 
+                        <button onclick='getWeather("${capital}")' class="btn btn-outline-light">Click Weather</button>
+                    </div>
                     <p class="card-text text-center" id="weather-${capital}"></p>
                 </div>
             </div>`;
@@ -44,7 +46,6 @@ async function getWeather(capital) {
 
     const weatherParagraph = document.getElementById(`weather-${capital}`);
     weatherParagraph.textContent = `Weather in ${weatherName}: ${mainWeather}, Temp: ${temp}`;
-    weatherParagraph.textContent = "";
 }
 
 api();
