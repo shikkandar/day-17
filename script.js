@@ -14,11 +14,11 @@ async function country(data) {
 
         const mainPage = document.getElementById("mainCon");
         const main = document.createElement("div");
-        main.setAttribute("class", "col-3");
+        main.setAttribute("class", "col-xxl-3 col-lg-4 col-md-6 col-sm-12");
         mainPage.appendChild(main);
 
         main.innerHTML = `
-            <div class="card m-3 c-card p-3" id="card" style="width: 18rem;">
+            <div data-aos="zoom-in-up" class="card m-3 c-card p-3" id="card" style="width: 18rem;">
                 <h5 class="m-0 text-center bg-dark text-light p-3">${countryName}</h5>
                 <img src="${flag}" class="card-img-top mt-3" alt="${countryName} flag">
                 <div class="card-body">
